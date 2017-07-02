@@ -22,3 +22,19 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li, ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* VV List Item */
+
+.vv-item {
+  padding-bottom: 5px;
+}
+
+.vv-item:nth-of-type(odd) {
+  background-color: #f8f8f8
+}

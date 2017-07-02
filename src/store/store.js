@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import DefectReducer from './reducers/defectReducers';
+import DefectReducer from '../reducers/defectReducers';
 
 const RootReducer = combineReducers({
   DefectReducer

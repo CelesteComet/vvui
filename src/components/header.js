@@ -6,6 +6,20 @@ class Header extends React.Component {
     super();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    // Message to indicate the set window size to the user.
+    /*
+    let _window = this.props.state.DefectReducer._window;
+    console.log(prevProps)
+    console.log(this.props)
+    console.log(prevProps.state.DefectReducer._window.width != this.props.state.DefectReducer._window.width)
+    if(prevProps.state.DefectReducer._window != this.props.state.DefectReducer._window) {
+      alert("Your window size is set to " + _window.width + "px width and " + _window.height + "px height.");
+    }
+    */
+     
+  }
+
   render() {
     return(
       <div>
@@ -40,12 +54,12 @@ class Header extends React.Component {
                 <form id="numOfRecordsSelector" className="navbar-form navbar-left">
                   <div className="input-group">
                     <input type="text" className="form-control" placeholder="0" aria-describedby="basic-addon2"/>
-                    <span className="input-group-addon" id="basic-addon2" >Get Records</span>
+                    <span className="input-group-addon" id="basic-addon2" onClick={this.props.getRecords}>Get Records</span>
                   </div>
                 </form>
                 <form className="navbar-form navbar-left">
-                  <button type="submit" className="btn btn-default">Set Window</button>  
-                  <button id="total-count" type="submit" className="btn btn-default">Open Windows</button>
+                  <button type="submit" className="btn btn-default" onClick={this.props.setWindowSize}>Set Window</button>  
+                  <button id="total-count" type="submit" className="btn btn-default" onClick={this.props.openWindows}>Open Windows</button>
                   <button type="submit" className="btn btn-default">Remove Customs</button>
                 </form>
                 <ul className="nav navbar-nav navbar-right">
